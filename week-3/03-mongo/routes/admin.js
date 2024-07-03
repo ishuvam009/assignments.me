@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const adminMiddleware = require("../middleware/admin");
-const { Admin,User,Course } = require('../db/index')
+const { Admin,Course } = require('../db/index')
 const router = Router();
 
 router.post('/signup', async (req, res) => {
