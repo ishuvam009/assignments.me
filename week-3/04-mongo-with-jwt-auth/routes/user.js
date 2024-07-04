@@ -3,7 +3,7 @@ const router = Router();
 const userMiddleware = require("../middleware/user");
 const jwt = require('jsonwebtoken');
 const { User } = require('../db');
-const jwtPassword = require("..");
+const { jwtPassword } = require('../secret');
 
 // User Routes
 router.post('/signup', async (req, res) => {
@@ -50,6 +50,7 @@ router.post('/signin', (req, res) => {
 
 router.get('/courses', (req, res) => {
     // Implement listing all courses logic
+    
 });
 
 router.post('/courses/:courseId', userMiddleware, (req, res) => {
